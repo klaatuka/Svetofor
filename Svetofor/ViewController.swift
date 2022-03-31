@@ -41,6 +41,26 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func startButtonPressed() {
+        
+        startButton.setTitle("Next", for: .normal)
+        
+        switch currentLight {
+        case .red:
+            redLight.alpha = lightIsOn
+            currentLight = .yellow
+            greenLight.alpha = lightIsOff
+        case .yellow:
+            yellowLight.alpha = lightIsOn
+            currentLight = .green
+            redLight.alpha = lightIsOff
+        case .green:
+            greenLight.alpha = lightIsOn
+            currentLight = .red
+            yellowLight.alpha = lightIsOff
+        }
+        
+        
+        
     }
     
 

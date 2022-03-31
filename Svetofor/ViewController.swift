@@ -26,12 +26,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .cyan
+        view.backgroundColor = .black
         
+        startButton.layer.cornerRadius = 10
+        
+        redLight.layer.cornerRadius = 75
+        greenLight.layer.cornerRadius = 75
+        yellowLight.layer.cornerRadius = 75
+        
+        redLight.alpha = lightIsOff
+        yellowLight.alpha = lightIsOff
+        greenLight.alpha = lightIsOff
         
         // Do any additional setup after loading the view.
     }
-
+    @IBAction func startButtonPressed() {
+    }
+    
 
 }
 
